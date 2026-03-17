@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.ubb.ui.ChatController"
+            spacing="10">
+    <Label fx:id="chatTitle" style="-fx-font-size: 18px;"/>
+
+    <ListView fx:id="messagesList" prefHeight="400"/>
+
+    <Label fx:id="replyLabel" textFill="gray"/>
+
+    <TextArea fx:id="messageBox" prefRowCount="3"/>
+
+    <HBox spacing="10">
+        <Button text="Send" onAction="#onSend"/>
+        <Button text="Refresh" onAction="#loadConversation"/>
+    </HBox>
+</VBox>

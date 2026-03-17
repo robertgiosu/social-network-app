@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.text.Text?>
+<VBox xmlns="http://javafx.com/javafx/8"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.ubb.ui.MainViewController"
+      spacing="10">
+
+    <padding>
+        <Insets top="10" left="10" right="10" bottom="10"/>
+    </padding>
+
+    <HBox spacing="25">
+        <VBox spacing="10">
+            <HBox spacing="10">
+                <Label fx:id="labelForId"/>
+                <TextField fx:id="idField"/>
+            </HBox>
+
+            <HBox spacing="10">
+                <Label fx:id="labelForUsername"/>
+                <TextField fx:id="usernameField"/>
+            </HBox>
+
+            <HBox spacing="10">
+                <Label fx:id="labelForFirstname"/>
+                <TextField fx:id="firstnameField"/>
+            </HBox>
+
+            <HBox spacing="10">
+                <Label fx:id="labelForLastname"/>
+                <TextField fx:id="lastnameField"/>
+            </HBox>
+
+            <HBox spacing="10">
+                <Label fx:id="labelForOccupation"/>
+                <TextField fx:id="occupationField"/>
+            </HBox>
+
+            <HBox spacing="10">
+                <Label fx:id="labelForDuckType"/>
+                <TextField fx:id="duckTypeField"/>
+            </HBox>
+
+            <HBox spacing="10">
+                <Label fx:id="labelForSpeed"/>
+                <TextField fx:id="speedField"/>
+            </HBox>
+
+            <HBox spacing="10">
+                <Label fx:id="labelForEndurance"/>
+                <TextField fx:id="enduranceField"/>
+            </HBox>
+
+            <HBox spacing="10">
+                <Button text="Add Person" onAction="#addPerson"/>
+                <Button text="Add Duck" onAction="#addDuck"/>
+                <Button text="Remove User" onAction="#removeUser"/>
+            </HBox>
+        </VBox>
+        <VBox spacing="10">
+            <HBox spacing="10">
+                <Label fx:id="labelForRelationship1"/>
+                <TextField fx:id="relationship1Field"/>
+            </HBox>
+            <HBox spacing="10">
+                <Label fx:id="labelForRelationship2"/>
+                <TextField fx:id="relationship2Field"/>
+            </HBox>
+            <HBox spacing="10">
+                <Button text="Add Relationship" onAction="#addRelationship"/>
+                <Button text="Remove Relationship" onAction="#removeRelationship"/>
+            </HBox>
+            <Button text="All Relationships" onAction="#showAllFriendships"/>
+        </VBox>
+        <VBox spacing="10">
+            <Label fx:id="labelForCommunities"/>
+            <HBox spacing="10">
+                <Button text="Nr. of Communities" onAction="#nrOfCommunities"/>
+                <Button text="Most Sociable Community" onAction="#mostSociableCommunity"/>
+            </HBox>
+        </VBox>
+        <VBox spacing="10">
+            <Label fx:id="labelForChat"/>
+            <HBox spacing="10">
+                <Label fx:id="labelForMessageRecipientId"/>
+                <TextField fx:id="messageRecipientIdField"/>
+            </HBox>
+            <Button text="Open Chatroom" onAction="#openChatroom"/>
+        </VBox>
+        <VBox spacing="10">
+            <Label text="Manage Your Friends"/>
+            <Button text="Open Friends Manager" onAction="#openFriendsManager"/>
+        </VBox>
+        <VBox spacing="10">
+            <Label text="Manage Profile and Race Events"/>
+            <Button text="Open Profile" onAction="#openProfile"/>
+            <Button text="Race Events" onAction="#openRaceEvents"/>
+        </VBox>
+    </HBox>
+
+    <HBox spacing="10">
+        <TableView fx:id="usersTable">
+            <columns>
+                <TableColumn fx:id="idColumn" text="ID" prefWidth="50"/>
+                <TableColumn fx:id="usernameColumn" text="Username" prefWidth="100"/>
+                <TableColumn fx:id="firstnameColumn" text="Firstname" prefWidth="100"/>
+                <TableColumn fx:id="lastnameColumn" text="Lastname" prefWidth="100"/>
+                <TableColumn fx:id="occupationColumn" text="Occupation" prefWidth="100"/>
+                <TableColumn fx:id="typeColumn" text="Type" prefWidth="150"/>
+                <TableColumn fx:id="speedColumn" text="Speed" prefWidth="100"/>
+                <TableColumn fx:id="enduranceColumn" text="Endurance" prefWidth="100"/>
+            </columns>
+        </TableView>
+        <TextArea fx:id="textBox"/>
+    </HBox>
+
+    <HBox spacing="10">
+        <Label fx:id="labelForDuckCBox"/>
+        <ComboBox fx:id="duckTypeCBox"/>
+    </HBox>
+
+    <HBox spacing="10">
+        <Button text="Previous" onAction="#onPreviousPage"/>
+        <Button text="Next" onAction="#onNextPage"/>
+        <Label fx:id="pageLabel"/>
+    </HBox>
+</VBox>

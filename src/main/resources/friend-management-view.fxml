@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.ubb.ui.FriendManagementController"
+            spacing="10">
+
+    <HBox spacing="10">
+        <VBox spacing="10">
+            <Label text="All users"/>
+            <TableView fx:id="usersTable">
+                <columns>
+                    <TableColumn fx:id="idColumn" text="ID" prefWidth="50"/>
+                    <TableColumn fx:id="usernameColumn" text="Username" prefWidth="100"/>
+                    <TableColumn fx:id="typeColumn" text="Type" prefWidth="150"/>
+                </columns>
+            </TableView>
+            <Button text="Send Friend Request" onAction="#onSendRequest"/>
+        </VBox>
+
+        <Separator/>
+
+        <VBox spacing="10">
+            <Label text="My Friends"/>
+            <ListView fx:id="friendsList"/>
+        </VBox>
+    </HBox>
+
+    <VBox spacing="10">
+        <Label text="Friend Requests"/>
+        <ListView fx:id="requestsList" prefHeight="150"/>
+        <HBox spacing="10">
+            <Button text="Accept" onAction="#onAcceptRequest"/>
+            <Button text="Reject" onAction="#onRejectRequest"/>
+        </HBox>
+    </VBox>
+</VBox>
